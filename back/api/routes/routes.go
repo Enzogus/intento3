@@ -38,4 +38,6 @@ func ConfigureRoutes(r *mux.Router) {
 
 	//Ruta para los aeropuertos
 	r.Handle("/aeropuerto", http.HandlerFunc(handlers.ObtenerAeropuertos))
+	//Ruta para los más comprados
+	r.Handle("/paquete-mas-comprado", http.HandlerFunc(handlers.ObtenerPaqueteMasComprado)).Methods("GET")
 }
